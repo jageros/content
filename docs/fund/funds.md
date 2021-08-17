@@ -1,7 +1,7 @@
 ---
 type: "posts"
 author: "jager"
-title: "基金网数据分析"
+title: "基金数据分析"
 date: "2021-08-17"
 tags: [
 "Fund",
