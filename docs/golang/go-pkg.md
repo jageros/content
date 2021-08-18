@@ -14,6 +14,16 @@ tags: [
 
 <!--more-->
 
+## 基于Websocket或者SockJS的实时通信平台
+> [github.com/centrifugal/centrifugo](https://github.com/centrifugal/centrifugo) </br>
+> [教程](https://www.jianshu.com/nb/41327411)
+
+## 开源的 Go 分布式事务框架
+> [github.com/yedf/dtm](https://github.com/yedf/dtm)
+
+## 开源的推荐系统
+> [github.com/zhenghaoz/gorse](https://github.com/zhenghaoz/gorse)
+
 ## go语言实现的lua虚拟机
 > [github.com/yuin/gopher-lua](https://github.com/yuin/gopher-lua)
 
