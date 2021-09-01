@@ -1,8 +1,8 @@
 ---
 type: "posts"
-weight: 15
+weight: 14
 bookCollapseSection: true
-title: "生活日志"
+title: "项目实践"
 ---
 
 # Introduction
