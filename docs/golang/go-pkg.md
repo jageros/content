@@ -14,6 +14,21 @@ tags: [
 
 <!--more-->
 
+## 一款根据 sql 语句自动生成 Go 结构体的 chrome 插件。
+> [sql2struct](https://github.com/idoubi/sql2struct)
+
+## 一个将 curl 请求命令和数据格式转换为 Go 相关代码的在线服务。
+> [url-to-Go](https://mholt.github.io/curl-to-go/)
+
+## 一个将 yaml 数据转换为 Go 结构体的在线服务。
+> [yaml-to-Go](https://zhwt.github.io/yaml-to-go/)
+
+## 一个将 toml 数据转换为 Go 结构体的在线服务。
+> [TOML-to-Go](https://xuri.me/toml-to-go/)
+
+## 一个将 json 数据转换为 Go 结构体的在线服务
+> [JSON-to-Go](https://mholt.github.io/json-to-go/)
+
 ## 基于Websocket或者SockJS的实时通信平台
 > [github.com/centrifugal/centrifugo](https://github.com/centrifugal/centrifugo) </br>
 > [教程](https://www.jianshu.com/nb/41327411)
