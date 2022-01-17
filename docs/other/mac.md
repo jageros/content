@@ -3,6 +3,7 @@ type: "posts"
 author: "jager"
 title: "其他记录"
 date: "2021-08-06"
+draft: true
 ---
 
 > 其他杂乱的操作记录，供必要时查阅

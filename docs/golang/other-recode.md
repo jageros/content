@@ -6,6 +6,7 @@ date: "2021-08-03"
 tags: [
 "go",
 ]
+draft: true
 ---
 
 > 本文记录一些golang程序的一些简短的要点
