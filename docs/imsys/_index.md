@@ -1,8 +1,8 @@
 ---
 type: "posts"
-weight: 16
+weight: 15
 bookCollapseSection: true
-title: "生活日志"
+title: "IM系统架构"
 ---
 
 # Introduction

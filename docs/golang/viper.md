@@ -39,8 +39,8 @@ var (
 
 // 命令行启动参数和配置文件统一的key，避免多次书写出错，命令行中直接使用即可，配置文件中，点隔开代表分级
 var (
-	//config
-	keyConfig = "config"
+	//conf.d
+	keyConfig = "conf.d"
 	//server
 	keyId   = "server.id"
 	keyMode = "server.mode"
@@ -286,7 +286,7 @@ func Parse(name string, opts ...func(*Option)) (ctx contextx.Context, wait func(
 	}
 
 	// 启动参数：
-	//config
+	//conf.d
 	pflag.String(keyConfig, Options.Configfile, "Config file path")
 	// server
 	pflag.Int(keyId, Options.ID, "Application Id")

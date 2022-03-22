@@ -42,7 +42,7 @@ hostnamectl set-hostname node2
 # 安装docker所需的工具
 yum install -y yum-utils device-mapper-persistent-data lvm2
 # 配置阿里云的docker源
-yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
+yum-conf.d-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
 # 指定安装这个版本的docker-ce
 yum install -y docker-ce-18.09.9-3.el7
 # 启动docker
@@ -61,7 +61,7 @@ systemctl stop firewalld
 setenforce 0
 # 永久关闭 修改/etc/sysconfig/selinux文件设置
 sed -i 's/SELINUX=permissive/SELINUX=disabled/' /etc/sysconfig/selinux
-sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/config
+sed -i "s/SELINUX=enforcing/SELINUX=disabled/g" /etc/selinux/conf.d
  
 # 禁用交换分区
 swapoff -a
@@ -101,14 +101,14 @@ systemctl enable kubelet && systemctl start kubelet
 # 初始化k8s 以下这个命令开始安装k8s需要用到的docker镜像
 # 因为无法访问到国外网站，所以这条命令使用的是国内的阿里云的源(registry.aliyuncs.com/google_containers)。
 # 另一个非常重要的是：这里的--apiserver-advertise-address使用的是master和node间能互相ping通的master ip，测试环境中是192.168.99.104，请修改成自己的ip再执行。
-# 这条命令执行时会卡在[preflight] You can also perform this action in beforehand using ''kubeadm config images pull，大概需要2分钟，请耐心等待。
+# 这条命令执行时会卡在[preflight] You can also perform this action in beforehand using ''kubeadm conf.d images pull，大概需要2分钟，请耐心等待。
 
 kubeadm init --image-repository registry.aliyuncs.com/google_containers --kubernetes-version v1.16.0 --apiserver-advertise-address 192.168.60.143 --pod-network-cidr=10.244.0.0/16 --token-ttl 0
  
 # 上面安装完成后，k8s会提示你输入如下命令，执行
 mkdir -p $HOME/.kube
-sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
-sudo chown $(id -u):$(id -g) $HOME/.kube/config
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/conf.d
+sudo chown $(id -u):$(id -g) $HOME/.kube/conf.d
  
 # 查询node 加入 master的命令
 kubeadm token create --print-join-command
