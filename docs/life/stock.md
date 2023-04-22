@@ -7,10 +7,10 @@ tags: [
 "stock",
 ]
 bookToc: true
-draft: true
+draft: false
 ---
 
-> 股票买卖要点记录~~
+> 股票买卖要点记录
 
 <!--more-->
 
